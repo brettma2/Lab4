@@ -73,5 +73,13 @@ public class AnimalTest
 		Assert.assertEquals(TEST_WEIGHT, animal.getWeight(), 0.01);
 		Assert.assertEquals(TEST_HEIGHT, animal.getHeight(), 0.01);
 	}
+	
+	@Test 
+	public void testToString() throws AssertException
+	{
+		Animal animal = new Animal("blue","test",TEST_WEIGHT,TEST_HEIGHT);
+		
+		Assert.assertEquals("test, a blue-colored animal. 10.0 pounds, 20.0 inches\n", animal.toString());
+	}
 }
 
