@@ -54,4 +54,13 @@ public class ZooTest{
 		
 		//Assert.assertEquals(animals, zoo.getAnimals());
 	}
+	
+	@Test 
+	public void testToString() throws AssertException{
+		Zoo zoo = new Zoo(1);
+		zoo.addAnimal(mouse);
+		zoo.addAnimal(rabbit);
+		
+		Assert.assertEquals("These animals live in the zoo: \nmouse, a grey-colored animal. 1.0 pounds, 10.0 inches\nrabbit, a white-colored animal. 2.0 pounds, 10.0 inches\n", zoo.toString());
+	}
 }
